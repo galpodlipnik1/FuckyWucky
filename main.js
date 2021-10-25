@@ -1,13 +1,11 @@
-function audio() {
-    var audio = new Audio("opsie.mp3");
+var audio = new Audio("opsie.mp3");
 
-    audio.oncanplaythrough = function(){
-        audio.play();
-    }
-
-    audio.loop = false;
-
-    audio.onended = function(){
+audio.oncanplaythrough = function () {
     audio.play();
-    }
+}
+
+audio.loop = true;
+
+audio.onended = function () {
+    audio.play();
 }
